@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "devDependencies": {
+    "@socketsupply/test-dom": "^0.4.1",
+    "esbuild": "^0.15.11",
+    "tapzero": "^0.6.1"
+  },
+  "dependencies": {
+    "@socketsupply/ssc-node": "^1.8.2",
+    "@socketsupply/ssc-test": "^0.1.5",
+    "htm": "^3.1.1",
+    "preact": "^10.11.1",
+    "untildify": "^4.0.0"
+  }
+}
