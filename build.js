@@ -3,7 +3,6 @@ import * as path from 'path';
 import { promises as fs } from 'fs'
 import * as esbuild from 'esbuild'
 import buildTests from '@socketsupply/ssc-test/build-tests.js'
-// import buildTests from '@socketsupply/ssc-test/build-tests.esm.js'
 
 //
 // build a main and render script
@@ -32,9 +31,6 @@ async function main () {
 
     // html
     await cp('src/index.html', './public')
-
-    console.log('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', buildTests)
-    console.log('aaaaaaaaaaaaaaaa', buildTests.isTest)
 
     // tests
     if (!buildTests.isTest()) return
