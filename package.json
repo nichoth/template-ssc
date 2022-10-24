@@ -1,12 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "build": "node ./build.js"
-  },
-  "devDependencies": {
-    "@socketsupply/test-dom": "^0.4.1",
-    "esbuild": "^0.15.11",
-    "tapzero": "^0.6.1"
+    "lint": "standardx -v",
+    "build": "node ./build.js",
+    "preversion": "npm run lint",
+    "test": "node ./build.js -- test && ssc build -r -o --test=test.js | tap-arc"
   },
   "dependencies": {
     "@socketsupply/ssc-node": "^1.8.2",
@@ -14,5 +12,16 @@
     "htm": "^3.1.1",
     "preact": "^10.11.1",
     "untildify": "^4.0.0"
+  },
+  "devDependencies": {
+    "@socketsupply/test-dom": "^0.4.1",
+    "esbuild": "^0.15.11",
+    "standardx": "^7.0.0",
+    "tapzero": "^0.6.1"
+  },
+  "standardx": {
+    "ignore": [
+      "public/*"
+    ]
   }
 }

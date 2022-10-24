@@ -1,5 +1,5 @@
 // @ts-check
-import * as path from 'path';
+import * as path from 'path'
 import { promises as fs } from 'fs'
 import * as esbuild from 'esbuild'
 import buildTests from '@socketsupply/ssc-test/build-tests'
