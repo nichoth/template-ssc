@@ -4,10 +4,10 @@ const { test } = require('tapzero')
 const dom = require('@socketsupply/test-dom')
 const uuid = require('uuid').v4
 const path = require('path-browserify')
-const Harness = require('@socketsupply/ssc-test/dist/harness')
+const Harness = require('@socketsupply/ssc-test/harness')
 
 test('setup', async t => {
-    const harness = await Harness.create({ customBootstrap })
+    const harness = await Harness.create({ bootstrap })
     t.ok(harness, 'should create harness')
 })
 
@@ -19,7 +19,7 @@ test('find an element', async t => {
     t.ok(dom.isElementVisible(el), 'should find a visible link tag')
 })
 
-function customBootstrap (harness, system, env) {
+function bootstrap (harness, system, env) {
     const _dialog = system.dialog.bind(system)
     const mocks = harness.mocks
     mocks.folder = uuid()

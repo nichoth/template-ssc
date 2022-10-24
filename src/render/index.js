@@ -19,9 +19,10 @@ function Demonstration () {
     </div>`
 }
 
-// addTest()
+render(html`<${Demonstration} />`, document.body)
+addTest()
 
-window.addEventListener('backend.ready', () => {
-    render(html`<${Demonstration} />`, document.body)
-    addTest()
-}, { once: true })
+// window.addEventListener('backend.ready', () => {
+//     render(html`<${Demonstration} />`, document.body)
+//     addTest()
+// }, { once: true })
