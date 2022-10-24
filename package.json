@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@socketsupply/ssc-node": "^1.8.2",
-    "@socketsupply/ssc-test": "^0.1.7",
+    "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
     "htm": "^3.1.1",
     "preact": "^10.11.1",
     "untildify": "^4.0.0"

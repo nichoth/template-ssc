@@ -2,7 +2,7 @@
 import * as path from 'path';
 import { promises as fs } from 'fs'
 import * as esbuild from 'esbuild'
-import buildTests from '@socketsupply/ssc-test/build-tests.js'
+import buildTests from '@socketsupply/ssc-test/build-tests'
 
 //
 // build a main and render script
@@ -23,8 +23,7 @@ async function main () {
         entryPoints: ['src/main/index.js'],
         bundle: true,
         keepNames: true,
-        // minify: true,
-        format: 'cjs',
+        // format: 'cjs',
         outfile: path.join('./public/', 'main.js'),
         platform: 'node'
     })
