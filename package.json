@@ -4,6 +4,7 @@
     "lint": "standardx -v",
     "build": "node ./build.js",
     "preversion": "npm run lint",
+    "postversion": "git push && git push --tags",
     "start": "node ./build && ssc build -r -o",
     "test": "node ./build.js --test && ssc build -r -o --test=test.js | tap-arc"
   },
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@socketsupply/test-dom": "^0.4.1",
     "esbuild": "^0.15.11",
+    "git-hooks-plus": "^1.0.1",
     "standardx": "^7.0.0",
     "tap-arc": "^0.3.5",
     "tapzero": "^0.6.1"

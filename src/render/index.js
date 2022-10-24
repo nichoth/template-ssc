@@ -1,7 +1,7 @@
 // @ts-check
 'use strict'
 
-import { render } from 'preact'
+import { render } from 'preact';
 import { html } from 'htm/preact'
 import addTest from '@socketsupply/ssc-test'
 
