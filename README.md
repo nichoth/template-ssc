@@ -1,6 +1,6 @@
 # template
 
-A github template for ssc projects
+A template for ssc projects
 
 ## use
 
