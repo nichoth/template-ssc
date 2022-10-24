@@ -35,7 +35,6 @@ async function main () {
     if (!buildTests.isTest()) return
     const testDir = path.join(__dirname, '/test')
     const outputDir = path.join(__dirname, '/public')
-    // (test-dir, output-dir)
     await buildTests(testDir, outputDir)
 }
 
