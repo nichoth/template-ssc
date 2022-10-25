@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "scripts": {
     "lint": "standardx -v",
     "build": "node ./build.js",
