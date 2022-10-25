@@ -1,6 +1,6 @@
 # template
 
-A template for ssc projects
+A template for ssc projects, using a preferred dev environment -- [standardx](https://www.npmjs.com/package/standardx), [git-hook-plus](https://www.npmjs.com/package/git-hooks-plus), and typescript via a [jsconfig.json](jsconfig.json) file
 
 ## use
 
