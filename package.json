@@ -1,11 +1,11 @@
 {
   "scripts": {
     "lint": "standardx -v",
-    "build": "node ./build.js",
+    "build": "node ./build.mjs",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags",
     "start": "node ./build && ssc build -r -o",
-    "test": "node ./build.js --test && ssc build -r -o --test=test.js | tap-arc"
+    "test": "node ./build.mjs --test && ssc build -r -o --test=test.js | tap-arc"
   },
   "dependencies": {
     "@socketsupply/ssc-node": "^1.8.2",
