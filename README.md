@@ -4,7 +4,7 @@ A template for ssc projects, using a preferred dev environment -- [standardx](ht
 
 ## use
 
-Fork this or use github's 'template' button. Then edit the source code in `src/main` and `src/render`.
+Use github's 'template' button, or clone this then `rm -rf .git && git init`. Then `npm init` and edit the source code in `src/main` and `src/render`.
 
 ### run
 ```
