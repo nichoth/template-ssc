@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename)
 async function main () {
     // render process
     await esbuild.build({
-        entryPoints: ['src/render/index.js'],
+        entryPoints: ['src/render/index.mjs'],
         bundle: true,
         keepNames: true,
         // minify: true,
