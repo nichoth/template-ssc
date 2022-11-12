@@ -22,6 +22,7 @@ async function main () {
     })
 
     // we only have one possible command -- env.get
+    // return the path to the user's home dir
     system.receive = function _receive (command, arg) {
         if (command !== 'send') {
             return {
@@ -44,7 +45,7 @@ async function main () {
             }
         }
 
-        return { err: null, data: os.homedir() }
+        return { err: null, data: { home: os.homedir() } }
     }
 
     const resourcesDirectory = path.dirname(process.argv[1])
