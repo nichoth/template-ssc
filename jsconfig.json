@@ -3,14 +3,14 @@
     "target": "es2020",
     "lib": ["es2020", "dom"],
     "noEmit": true,
-    "module": "es2020",
+    "module": "esnext",
     "strict": false,
     "moduleResolution": "node16",
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules"],
   "include": [
     "*.js",
+    "*.mjs",
     "src/**/*.js",
     "src/**/*.d.ts"
   ]
