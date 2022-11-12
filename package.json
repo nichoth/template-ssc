@@ -1,18 +1,15 @@
 {
   "scripts": {
     "lint": "standardx -v",
-    "build": "node ./build.mjs && ssc build",
+    "build": "node ./build.mjs && ssc build .",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags",
     "start": "node ./build.mjs && ssc build -r -o",
-    "test": "node ./build.mjs --test && ssc build --test=test.js --headless -r -o | tap-arc"
+    "test": "node ./build.mjs --test && ssc build --test=test.js --headless -r -o . | tap-arc"
   },
   "dependencies": {
     "@socketsupply/ssc-node": "^1.8.2",
-    "@socketsupply/tonic": "^14.3.0",
-    "htm": "^3.1.1",
-    "path-browserify": "^1.0.1",
-    "preact": "^10.11.1"
+    "@socketsupply/tonic": "^14.3.0"
   },
   "devDependencies": {
     "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
@@ -25,10 +22,7 @@
   },
   "eslintConfig": {
     "rules": {
-      "indent": [
-        "error",
-        4
-      ]
+      "indent": [ "error", 4 ]
     }
   },
   "standardx": {

@@ -1,28 +1,17 @@
 // @ts-check
 'use strict'
 
-import { render } from 'preact'
-import { html } from 'htm/preact'
 import addTest from '@socketsupply/ssc-test'
+import Tonic from '@socketsupply/tonic'
 
-//
-// We have two bundles, src & test.
-// If we need to share data between them,
-// we can expose things as global variables
-//
-Reflect.set(window, 'TEST_example', 'example')
-
-function Demonstration () {
-    return html`<div class="demo">
-        <h1>hello, world</h1>
-        <a href="/hello">hello</a>
-    </div>`
+class MyGreeting extends Tonic {
+    render () {
+        return this.html`
+            <h1>Hello, World.</h1>
+            <a href="/hello">link example</a>
+        `
+    }
 }
 
-render(html`<${Demonstration} />`, document.body)
+Tonic.add(MyGreeting)
 addTest()
-
-// window.addEventListener('backend.ready', () => {
-//     render(html`<${Demonstration} />`, document.body)
-//     addTest()
-// }, { once: true })
