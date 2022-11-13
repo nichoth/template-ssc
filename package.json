@@ -2,7 +2,7 @@
   "scripts": {
     "lint": "standardx -v",
     "build": "node ./build.mjs && ssc build .",
-    "preversion": "npm run lint",
+    "preversion": "check-deps . 2 && npm run lint",
     "postversion": "git push && git push --tags",
     "start": "node ./build.mjs && ssc build -r -o",
     "test": "node ./build.mjs --test && ssc build --test=test.js --headless -r -o . | tap-arc"
@@ -12,6 +12,7 @@
     "@socketsupply/tonic": "^14.3.0"
   },
   "devDependencies": {
+    "@socketsupply/check-max-deps": "github:socketsupply/check-max-deps",
     "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
     "@socketsupply/test-dom": "^0.4.1",
     "esbuild": "^0.15.11",
@@ -22,7 +23,10 @@
   },
   "eslintConfig": {
     "rules": {
-      "indent": [ "error", 4 ]
+      "indent": [
+        "error",
+        4
+      ]
     }
   },
   "standardx": {

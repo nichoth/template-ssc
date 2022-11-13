@@ -14,6 +14,7 @@ The `src/main` script is optional. It is an example of a script using node's API
 * git hooks via [git-hooks-plus](https://www.npmjs.com/package/git-hooks-plus) -- lint the code prior to `push`
 * tests via [ssc-test](https://github.com/socketsupply/ssc-test), [tapzero](https://www.npmjs.com/package/tapzero) & [test-dom](https://www.npmjs.com/package/@socketsupply/test-dom)
 * `import` syntax / ES6 modules 
+* check the number of dependencies before you increase the version number -- `npm run preversion` -- see  [@socketsupply/check-max-deps](https://github.com/socketsupply/check-max-deps)
 
 ## npm scripts
 
