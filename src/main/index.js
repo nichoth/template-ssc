@@ -1,28 +1,12 @@
 // @ts-check
 'use strict'
 
-const { system } = require('@socketsupply/ssc-node')
-const path = require('path')
-const untildify = require('untildify')
-
-class Env {
-    get () {
-        try {
-            return {
-                err: null,
-                data: {
-                    home: untildify('~')
-                }
-            }
-        } catch (err) {
-            return { err, data: null }
-        }
-    }
-}
+import { system } from '@socketsupply/ssc-node'
+import path from 'path'
+import os from 'os'
 
 async function main () {
     const screen = await system.getScreenSize()
-    const env = new Env()
 
     await system.setSize({
         window: 0,
@@ -38,6 +22,7 @@ async function main () {
     })
 
     // we only have one possible command -- env.get
+    // return the path to the user's home dir
     system.receive = function _receive (command, arg) {
         if (command !== 'send') {
             return {
@@ -60,7 +45,7 @@ async function main () {
             }
         }
 
-        return env.get()
+        return { err: null, data: { home: os.homedir() } }
     }
 
     const resourcesDirectory = path.dirname(process.argv[1])

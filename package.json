@@ -1,21 +1,19 @@
 {
   "scripts": {
     "lint": "standardx -v",
-    "build": "node ./build.mjs",
-    "preversion": "npm run lint",
+    "build": "node ./build.mjs && ssc build .",
+    "preversion": "check-deps . 2 && npm run lint",
     "postversion": "git push && git push --tags",
-    "start": "node ./build && ssc build -r -o",
-    "test": "node ./build.mjs --test && ssc build -r -o --test=test.js | tap-arc"
+    "start": "node ./build.mjs && ssc build -r -o",
+    "test": "node ./build.mjs --test && ssc build --test=test.js --headless -r -o . | tap-arc"
   },
   "dependencies": {
     "@socketsupply/ssc-node": "^1.8.2",
-    "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
-    "htm": "^3.1.1",
-    "path-browserify": "^1.0.1",
-    "preact": "^10.11.1",
-    "untildify": "^4.0.0"
+    "@socketsupply/tonic": "^14.3.0"
   },
   "devDependencies": {
+    "@socketsupply/check-max-deps": "github:socketsupply/check-max-deps",
+    "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
     "@socketsupply/test-dom": "^0.4.1",
     "esbuild": "^0.15.11",
     "git-hooks-plus": "^1.0.1",
@@ -25,7 +23,10 @@
   },
   "eslintConfig": {
     "rules": {
-      "indent": ["error", 4]
+      "indent": [
+        "error",
+        4
+      ]
     }
   },
   "standardx": {
