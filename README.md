@@ -1,7 +1,7 @@
 # template
 A template for ssc projects, using a preferred dev environment -- [standardx](https://www.npmjs.com/package/standardx), [git-hook-plus](https://www.npmjs.com/package/git-hooks-plus), and typescript via a [jsconfig.json](jsconfig.json) file
 
-This project is an example of using `ssc` without a build script in `ssc.config`. This will simply copy all files from an input directory to an output directory. So the build process is two discrete steps -- first build a static website as normal, then use `ssc` to build a binary app from the static website.
+This project is an example of using `ssc` without a `build` script in `ssc.config`. This will simply copy all files from an input directory to an output directory. So the build process is two discrete steps -- first build a static website as normal to the `public/` directory, then use `ssc` to build a binary app from the static website, which goes in the `dist/` folder.
 
 ## use
 Use github's 'template' button, or clone this then `rm -rf .git && git init`. Then `npm i && npm init` and edit the source code in `src/main` and `src/render`.
