@@ -1,9 +1,12 @@
 // @ts-check
 'use strict'
 
-import '@socketsupply/ssc-test/test-context' // must be imported first
-import { test } from 'tapzero'
+import testContext from '@socketsupply/ssc-test/test-context'
 import dom from '@socketsupply/test-dom'
+import tapzero from 'tapzero'
+const { test } = tapzero
+
+testContext(tapzero)
 
 test('find an element', async t => {
     const el = await dom.waitFor({

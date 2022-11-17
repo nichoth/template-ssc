@@ -1,13 +1,12 @@
 npm-debug.log*
 
-# Dependency directories
-node_modules/
-
 # dotenv environment variable files
 .env
 
 # Dependency directories
 node_modules/
 
+# compiled code
 dist/
 public/
+
