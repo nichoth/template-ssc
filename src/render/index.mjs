@@ -17,3 +17,4 @@ Tonic.add(MyGreeting)
 
 // `addTest` does nothing if `process.argv` does not include `--test=`
 addTest()
+
