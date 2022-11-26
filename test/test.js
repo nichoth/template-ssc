@@ -15,4 +15,3 @@ test('find an element', async t => {
 
     t.ok(dom.isElementVisible(el), 'should find a visible link tag')
 })
-

@@ -12,6 +12,8 @@
     "@socketsupply/tonic": "^14.3.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "7.19.1",
+    "@babel/plugin-syntax-import-assertions": "7.20.0",
     "@socketsupply/check-max-deps": "github:socketsupply/check-max-deps",
     "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
     "@socketsupply/test-dom": "github:socketsupply/test-dom",
@@ -20,15 +22,6 @@
     "standardx": "^7.0.0",
     "tap-arc": "^0.3.5",
     "tapzero": "^0.6.1"
-  },
-  "eslintConfig": {
-    "rules": {
-      "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
-      "indent": [
-        "error",
-        4
-      ]
-    }
   },
   "standardx": {
     "ignore": [
