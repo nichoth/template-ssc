@@ -14,7 +14,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
     "@babel/plugin-syntax-import-assertions": "7.20.0",
-    "@socketsupply/check-max-deps": "github:socketsupply/check-max-deps",
+    "@nichoth/check-max-deps": "0.0.2",
     "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
     "@socketsupply/test-dom": "0.5.0",
     "esbuild": "^0.15.11",
