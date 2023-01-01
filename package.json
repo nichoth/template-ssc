@@ -4,7 +4,7 @@
     "build": "mkdir -p public dist && rm -rf dist/* public/* && cp src/index.html src/style.css public && npm run build-js && ssc build .",
     "build-js": "mkdir -p ./public && esbuild src/index.mjs --bundle --outfile=public/bundle.js",
     "build-tests": "esbuild test/test.mjs --bundle --outfile=public/test.mjs",
-    "preversion": "check-deps . 2 && npm run lint",
+    "preversion": "check-deps . 6 && npm run lint",
     "postversion": "git push && git push --tags",
     "start": "npm run build && ssc build -r .",
     "test": "node ./build.mjs --test && ssc build --test=test.mjs --headless -r -o . | tap-arc"
