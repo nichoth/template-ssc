@@ -3,7 +3,7 @@
 
 import { test, GLOBAL_TEST_RUNNER } from 'tapzero'
 import '@socketsupply/io/redirectOutput.js'
-import sleep from './sleep.js'
+import sleep from './sleep.mjs'
 
 const pollTimeout = setTimeout(function poll () {
     if (GLOBAL_TEST_RUNNER.completed) {
