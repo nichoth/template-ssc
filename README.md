@@ -6,8 +6,6 @@ This project is an example of using `ssc` without a `build` script in `socket.in
 ## use
 Use github's 'template' button, or clone this then `rm -rf .git && git init`. Then `npm i && npm init` and edit the source code in `src/main` and `src/render`.
 
-The `src/main` script is optional. It is an example of a script using node's API, so it is appropriate for desktop apps. It can be removed with no bad effects.
-
 ## featuring
 
 * lint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
