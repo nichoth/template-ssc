@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSC example</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Tonic, IO example</title>
 </head>
 <body>
-    <my-greeting></my-greeting>
-    <script type="text/javascript" src="bundle.js"></script>
+    <!--
+        script path must start with `.`
+        otherwise it indicates a root path from the filesystem root, 
+        not web root.
+    -->
+    <script src="./bundle.js"></script>
 </body>
 </html>
