@@ -10,7 +10,7 @@ Use github's 'template' button, or clone this then `rm -rf .git && git init`. Th
 
 * lint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
 * git hooks via [git-hooks-plus](https://www.npmjs.com/package/git-hooks-plus) -- lint the code prior to `push`
-* tests via [ssc-test](https://github.com/socketsupply/ssc-test), [tapzero](https://www.npmjs.com/package/tapzero) & [test-dom](https://www.npmjs.com/package/@socketsupply/test-dom)
+* tests via [tapzero](https://www.npmjs.com/package/tapzero)
 * `import` syntax / ES6 modules 
 * check the number of dependencies before you increase the version number -- `npm run preversion` -- see  [@socketsupply/check-max-deps](https://github.com/socketsupply/check-max-deps)
 * view library [Tonic](https://tonicframework.dev/)
